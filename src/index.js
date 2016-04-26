@@ -1,5 +1,5 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
-  $("body").text("junk");
+  $("body").text("hello evin I tried to do things");
 });
