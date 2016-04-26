@@ -1,7 +1,8 @@
 module.exports = {
+  context: __dirname + "/src",
   entry: [
     'babel-polyfill',
-    './src/index',
+    './index',
   ],
   output: {
     path: __dirname + "/build",
@@ -16,8 +17,8 @@ module.exports = {
         exclude: /node_modules/,
       }
     ],
-    resolve: {
-      extensions: ['', '.js', '.jsx']
-    }
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 }
