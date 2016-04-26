@@ -1,4 +1,5 @@
 import React from 'react';
+import AudioGrid from '../AudioGrid';
 
 // PSA: This looks much more workable if you remove all the comments.
 
@@ -18,10 +19,9 @@ class App extends React.Component {
   state = {numOfClicks: 0};
   
   // You'll notice _handleClick declared a little differently than the render or constructor things
-  // That's because of something called binding. Basically if you don't declare it 
-  // using the () => {} notation, the 'this' variable isn't set to the component itself. Javascript!
-  // This isn't the case for the react functions, like constructor or render, because they
-  // do the binding for you!
+  // That's because of something called binding. Brushing over details, if you don't declare it 
+  // using the () => {} syntax, the 'this' variable isn't set to the component itself. Javascript!
+  // This isn't the case for the react functions like render, because they do the binding for you!
   _handleClick = () => {
     this.setState({numOfClicks: this.state.numOfClicks + 1 })
   };
@@ -32,9 +32,12 @@ class App extends React.Component {
   // ask me or google it. 
   render() {
     return(
-      <article onClick={this._handleClick.bind(this)}>
+      <article>
         <h1>Hi, {this.props.nameOfFriend}</h1>
-        <h2>You have clicked this text this many times: {this.state.numOfClicks}</h2>
+        <h2 onClick={this._handleClick.bind(this)}>
+          You have clicked this text this many times: {this.state.numOfClicks}
+        </h2>        
+        <AudioGrid />
       </article>
     );
   }
