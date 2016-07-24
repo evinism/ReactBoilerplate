@@ -1,2 +1,2 @@
-# wapi
-dicking around with sound
+# Boilerplate
+dicking around with boilerplatey-ness
