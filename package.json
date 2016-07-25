@@ -1,11 +1,11 @@
 {
-  "name": "wapi",
+  "name": "react-dumb-boilerplate",
   "version": "0.0.1",
-  "description": "a thing that people use",
+  "description": "a pretty dumb barebones frontend testbed boilerplate",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --port 80"
+    "dev": "webpack-dev-server --port 8080"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   "keywords": [
     "wapi"
   ],
-  "author": "evin and leo",
+  "author": "evin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/evinism/wapi/issues"
